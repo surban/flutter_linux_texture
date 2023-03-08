@@ -53,13 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final texture = _texture;
-    //final texture = null;
 
     return Scaffold(
       appBar: AppBar(
         title: const Text("Click + to trash OpenGL context"),
       ),
-      body: texture != null ? Texture(textureId: texture) : const Text("empty"),
+      body: texture != null ? Texture(textureId: texture) : const Text("Creating OpenGL texture..."),
       floatingActionButton: FloatingActionButton(
         heroTag: 'data',
         onPressed: () {
